@@ -515,7 +515,7 @@ else {
   .domain(country_nest.map(function(d) {return d.key}))
 
   var yScale_candy = d3.scaleBand()
-  .range([33, 690])
+  .range([33, 675])
   .padding(0.1)
   .domain(candies)
 
@@ -677,8 +677,14 @@ else {
         })
         d3.select("#candy_type-text").style("opacity", 0.3)
         d3.select("#overall_sentiment-text").style("opacity", 0.3)
+        d3.select("#overall-like-text").style("opacity", 0.3)
+        d3.select("#overall-dislike-text").style("opacity", 0.3)
+        d3.select("#overall-indifferent-text").style("opacity", 0.3)
         d3.select("#candy_type").text("")
         d3.select("#overall_sentiment").text("")
+        d3.select("#overall-like").text("")
+        d3.select("#overall-dislike").text("")
+        d3.select("#overall-indifferent").text("")
         d3.select("#young-like").text("")
         d3.select("#young-dislike").text("")
         d3.select("#twenties-like").text("")
@@ -736,8 +742,14 @@ else {
         d3.selectAll(".candy_bar").remove()
         d3.select("#candy_type-text").style("opacity", 0.3)
         d3.select("#overall_sentiment-text").style("opacity", 0.3)
+        d3.select("#overall-like-text").style("opacity", 0.3)
+        d3.select("#overall-dislike-text").style("opacity", 0.3)
+        d3.select("#overall-indifferent-text").style("opacity", 0.3)
         d3.select("#candy_type").text("")
         d3.select("#overall_sentiment").text("")
+        d3.select("#overall-like").text("")
+        d3.select("#overall-dislike").text("")
+        d3.select("#overall-indifferent").text("")
         d3.select("#young-like").text("")
         d3.select("#young-dislike").text("")
         d3.select("#twenties-like").text("")
@@ -821,7 +833,7 @@ else {
 
     svg_candy.append('g')
     .attr('class', 'x_axis_candy')
-    .attr('transform', 'translate(0, 720)')
+    .attr('transform', 'translate(0, 705)')
     .call(x_axis_candy)
 
     svg_candy.append('g')
@@ -1254,6 +1266,30 @@ candyClicked = false;
         chosen_candy = candy_types[i]
         chosen_candy_col = candy_codes[i]
 
+        overall_like = csv.filter(function(d) {
+            return d[chosen_candy_col] == 1
+        }).length / csv.length
+
+        overall_dislike = csv.filter(function(d) {
+            return d[chosen_candy_col] == -1
+        }).length / csv.length
+
+        overall_indifferent = csv.filter(function(d) {
+            return d[chosen_candy_col] == 0
+        }).length / csv.length
+
+        overall_like_rounded = d3.format(".2f")(overall_like * 100)
+        overall_dislike_rounded = d3.format(".2f")(overall_dislike * 100)
+        overall_indifferent_rounded = d3.format(".2f")(overall_indifferent * 100)
+
+        d3.select("#overall-like").text(overall_like_rounded + "%")
+        d3.select("#overall-dislike").text(overall_dislike_rounded + "%")
+        d3.select("#overall-indifferent").text(overall_indifferent_rounded + "%")
+
+        d3.select("#overall-like-text").style("opacity", 1)
+        d3.select("#overall-dislike-text").style("opacity", 1)
+        d3.select("#overall-indifferent-text").style("opacity", 1)
+
         if (csv.filter(function(d) {
                 return d.Age_Bracket == "0-17"
             }).length > 0) {
@@ -1525,8 +1561,14 @@ candyClicked = false;
         })
         d3.select("#candy_type-text").style("opacity", 0.3)
         d3.select("#overall_sentiment-text").style("opacity", 0.3)
+        d3.select("#overall-like-text").style("opacity", 0.3)
+        d3.select("#overall-dislike-text").style("opacity", 0.3)
+        d3.select("#overall-indifferent-text").style("opacity", 0.3)
         d3.select("#candy_type").text("")
         d3.select("#overall_sentiment").text("")
+        d3.select("#overall-like").text("")
+        d3.select("#overall-dislike").text("")
+        d3.select("#overall-indifferent").text("")
         d3.select("#young-like").text("")
         d3.select("#young-dislike").text("")
         d3.select("#twenties-like").text("")
@@ -1729,6 +1771,27 @@ if (candyClicked) {
     sentiment_val = candy_nest[chosen_candy]
     sentiment_val_rounded = d3.format(".2f")(sentiment_val)
     d3.select("#overall_sentiment").text(sentiment_val_rounded)
+
+        overall_like = csv.filter(function(d) {
+            return d[chosen_candy_col] == 1
+        }).length / csv.length
+
+        overall_dislike = csv.filter(function(d) {
+            return d[chosen_candy_col] == -1
+        }).length / csv.length
+
+        overall_indifferent = csv.filter(function(d) {
+            return d[chosen_candy_col] == 0
+        }).length / csv.length
+
+        overall_like_rounded = d3.format(".2f")(overall_like * 100)
+        overall_dislike_rounded = d3.format(".2f")(overall_dislike * 100)
+        overall_indifferent_rounded = d3.format(".2f")(overall_indifferent * 100)
+
+        d3.select("#overall-like").text(overall_like_rounded + "%")
+        d3.select("#overall-dislike").text(overall_dislike_rounded + "%")
+        d3.select("#overall-indifferent").text(overall_indifferent_rounded + "%")
+
         if (csv.filter(function(d) {
                 return d.Age_Bracket == "0-17"
             }).length > 0) {
@@ -2057,7 +2120,7 @@ for (var i=0; i<candies.length; ++i)
   .domain([-1, 1])
 
   var yScale_candy = d3.scaleBand()
-  .range([33, 690])
+  .range([33, 675])
   .padding(0.1)
   .domain(candies)
 
@@ -2122,6 +2185,31 @@ for (var i=0; i<candies.length; ++i)
         candy_types = ["Any full-sized candy bar", "Butterfinger", "Candy Corn", "Chiclets", "Dots", "Fuzzy Peaches", "Good & Plenty", "Gummy Bears", "Healthy Fruit", "Heath Bar", "Hershey's Dark Chocolate", "Hershey's Kisses", "Hershey's Milk Chocolate", "Jolly Rancher (bad flavor)", "Jolly Ranchers (good flavor)", "Junior Mints", "Kit Kat", "LaffyTaffy", "LemonHeads", "Licorice (black)", "Licorice (other)", "Lollipops", "Mike and Ike", "Milk Duds", "Milky Way", "Mint Kisses", "Mr. Goodbar", "Nerds", "Nestle Crunch", "Peanut M&Ms", "Peeps", "Pixy Stix", "Reeses Peanut Butter Cups", "Reeses Pieces", "Regular M&Ms", "Rolos", "Skittles", "Snickers", "Sourpatch Kids", "Starburst", "Swedish Fish", "Three Musketeers", "Tic Tacs", "Toblerone", "Trail Mix", "Twix", "Whatchamacallit Bars", "York Peppermint Patties"]
         i = candy_types.indexOf(candy_type)
         candy_codes = ["Any_full_sized_candy_bar", "Butterfinger", "Candy_Corn", "Chiclets", "Dots", "Fuzzy_Peaches", "Good_N_Plenty", "Gummy_Bears", "Healthy_Fruit", "Heath_Bar", "Hersheys_Dark_Chocolate", "Hersheys_Kisses", "Hersheys_Milk_Chocolate", "Jolly_Rancher_bad_flavor", "Jolly_Ranchers_good_flavor", "Junior_Mints", "Kit_Kat", "LaffyTaffy", "LemonHeads", "Licorice_black", "Licorice_not_black", "Lollipops", "Mike_and_Ike", "Milk_Duds", "Milky_Way", "Mint_Kisses", "Mr_Goodbar", "Nerds", "Nestle_Crunch", "Peanut_M_Ms", "Peeps", "Pixy_Stix", "Reeses_Peanut_Butter_Cups", "Reeses_Pieces", "Regular_M_Ms", "Rolos", "Skittles", "Snickers", "Sourpatch_Kids", "Starburst", "Swedish_Fish", "Three_Musketeers", "Tic_Tacs", "Toblerone", "Trail_Mix", "Twix", "Whatchamacallit_Bars", "York_Peppermint_Patties"]
+        chosen_candy_col = candy_codes[i]
+
+        overall_like = csv.filter(function(d) {
+            return d[chosen_candy_col] == 1
+        }).length / csv.length
+
+        overall_dislike = csv.filter(function(d) {
+            return d[chosen_candy_col] == -1
+        }).length / csv.length
+
+        overall_indifferent = csv.filter(function(d) {
+            return d[chosen_candy_col] == 0
+        }).length / csv.length
+
+        overall_like_rounded = d3.format(".2f")(overall_like * 100)
+        overall_dislike_rounded = d3.format(".2f")(overall_dislike * 100)
+        overall_indifferent_rounded = d3.format(".2f")(overall_indifferent * 100)
+
+        d3.select("#overall-like").text(overall_like_rounded + "%")
+        d3.select("#overall-dislike").text(overall_dislike_rounded + "%")
+        d3.select("#overall-indifferent").text(overall_indifferent_rounded + "%")
+
+        d3.select("#overall-like-text").style("opacity", 1)
+        d3.select("#overall-dislike-text").style("opacity", 1)
+        d3.select("#overall-indifferent-text").style("opacity", 1)
 
         if (csv.filter(function(d) {
                 return d.Age_Bracket == "0-17"
@@ -2442,8 +2530,14 @@ for (var i=0; i<candies.length; ++i)
         })
         d3.select("#candy_type-text").style("opacity", 0.3)
         d3.select("#overall_sentiment-text").style("opacity", 0.3)
+        d3.select("#overall-like-text").style("opacity", 0.3)
+        d3.select("#overall-dislike-text").style("opacity", 0.3)
+        d3.select("#overall-indifferent-text").style("opacity", 0.3)
         d3.select("#candy_type").text("")
         d3.select("#overall_sentiment").text("")
+        d3.select("#overall-like").text("")
+        d3.select("#overall-dislike").text("")
+        d3.select("#overall-indifferent").text("")
         d3.select("#young-like").text("")
         d3.select("#young-dislike").text("")
         d3.select("#twenties-like").text("")
