@@ -1,0 +1,112 @@
+body {
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 13px;
+    opacity: 0.3;
+}
+
+h2 {
+    text-align: center;
+}
+
+.clear-box {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.chart-title {
+    font-weight: bold;
+    text-anchor: middle;
+    font-size: 24px;
+}
+
+.clear-text {
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.x-axis-text {
+    font-size: 10px;
+}
+
+.participants-text {
+    text-anchor: middle;
+}
+
+#project_title {
+    width: 1300px;
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+#left_title {
+    width: 500px;
+    height: 35px;
+    position: absolute;
+    top: 67px;
+    left: 10px;
+}
+
+#age_box {
+    width: 500px;
+    height: 290px;
+    position: absolute;
+    top: 102px;
+    left: 10px;
+}
+
+#gender_box {
+    width: 500px;
+    height: 205px;
+    position: absolute;
+    top: 389px;
+    left: 10px;
+}
+
+#country_box {
+    width: 500px;
+    height: 205px;
+    position: absolute;
+    top: 611px;
+    left: 10px;
+}
+
+#candy_box {
+    width: 400px;
+    height: 760px;
+    position: absolute;
+    top: 67px;
+    left: 520px;
+}
+
+#text_title {
+    position: absolute;
+    top: 52px;
+    left: 980px;
+    height: 35px;
+}
+
+#text_annotation {
+    width: 300px;
+    height: 610px;
+    position: absolute;
+    top: 97px;
+    left: 980px;
+}
+
+#num_participants_text {
+    opacity: 1;
+}
+
+#candy_type-text {
+    opacity: 0.3;
+}
+
+#overall_sentiment-text {
+    opacity: 0.3;
+}

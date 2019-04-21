@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Candy Preferences by Demographic</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+   </head>
+    <body>
+            <svg id="project_title">
+                <text x="55%" y="23" class="chart-title">Candy Preferences by Demographic</text>
+                <g id="all-clear">
+                    <text x="55%" y="45" class="clear-text">Clear All</text>
+                    <rect class="clear-box" id="clear-all-box" x="680" y="33" width="70" height="15" rx="15" ry="15"></rect>
+                </g>
+            </svg>
+            <svg id="left_title">
+                <text x="55%" y="26" class="chart-title">Participant Demographics</text>
+            </svg>
+            <svg id="age_box">
+                <text id="age_title" class="chart-title" x="50%" y="26">Age</text>
+                <g id="age-clear">
+                <text x="50%" y="50" class="clear-text">Clear Selection</text>
+                <rect class="clear-box" id="age-clear-box" x="200" y="38" width="100" height="15" rx="15" ry="15"></rect>
+                </g>
+                <text x="50%" y="280" class="x-axis-text participants-text">Number of Participants</text>
+            </svg>
+            <svg id="gender_box">
+                <text x="50%" y="26" class="chart-title">Gender</text>
+                <g id="gender-clear">
+                <text x="50%" y="50" class="clear-text">Clear Selection</text>
+                <rect class="clear-box" id="gender-clear-box" x="200" y="38" width="100" height="15" rx="15" ry="15"></rect>
+                </g>
+               <text x="50%" y="205" class="x-axis-text participants-text">Number of Participants</text>
+            </svg>
+            <svg id="country_box">
+                <text x="50%" y="26" class="chart-title">Country</text>
+                <g id="country-clear">
+                <text x="50%" y="50" class="clear-text">Clear Selection</text>
+                <rect class="clear-box" id="country-clear-box" x="200" y="38" width="100" height="15" rx="15" ry="15"></rect>
+                </g>
+               <text x="50%" y="205" class="x-axis-text participants-text">Number of Participants</text>
+            </svg>
+            <svg id="candy_box">
+                <text x="50%" y="26" class="chart-title">Candy Preference</text>
+                <g id="candy-clear">
+                <text x="50%" y="50" class="clear-text">Clear Selection</text>
+                <rect class="clear-box" id="candy-clear-box" x="150" y="38" width="100" height="15" rx="15" ry="15"></rect>
+                </g>
+                <text x="380" y="750" class="x-axis-text">JOY</text>
+                <text x="190" y="750" class="x-axis-text">MEH</text>
+                <text x="0" y="750" class="x-axis-text">DESPAIR</text>
+            </svg>
+            <div id="text_title">
+                <h2>Candy Details</h2>
+            </div>
+            <div id="text_annotation">
+                <p id="num_participants_text"><b>Number of Participants:</b> <span id="num_participants"></span>
+            </br><b id="candy_type-text">Candy Type:</b> <span id="candy_type"></span>
+            </br><b id="overall_sentiment-text">Overall Sentiment:</b> <span id="overall_sentiment"></span></p>
+            <p id="young-preferences">Age: 0-17
+            </br>Percent Like: <span id="young-like"></span>
+            </br>Percent Dislike: <span id="young-dislike"></span>
+            </p>
+            <p id="twenties-preferences">Age: 18-29
+            </br>Percent Like: <span id="twenties-like"></span>
+            </br>Percent Dislike: <span id="twenties-dislike"></span>
+            </p>
+            <p id="thirties-preferences">Age: 30-39
+            </br>Percent Like: <span id="thirties-like"></span>
+            </br>Percent Dislike: <span id="thirties-dislike"></span>
+            </p>
+            <p id="forties-preferences">Age: 40-49
+            </br>Percent Like: <span id="forties-like"></span>
+            </br>Percent Dislike: <span id="forties-dislike"></span>
+            </p>
+            <p id="fifties-preferences">Age: 50-64
+            </br>Percent Like: <span id="fifties-like"></span>
+            </br>Percent Dislike: <span id="fifties-dislike"></span>
+            </p>
+            <p id="seniors-preferences">Age: 65+
+            </br>Percent Like: <span id="seniors-like"></span>
+            </br>Percent Dislike: <span id="seniors-dislike"></span>
+            </p>
+            <p id="men-preferences">Gender: Male
+            </br>Percent Like: <span id="men-like"></span>
+            </br>Percent Dislike: <span id="men-dislike"></span>
+            </p>
+            <p id="women-preferences">Gender: Female
+            </br>Percent Like: <span id="women-like"></span>
+            </br>Percent Dislike: <span id="women-dislike"></span>
+            </p>
+            <p id="gender_unknown-preferences">Gender: Unknown
+            </br>Percent Like: <span id="gender_unknown-like"></span>
+            </br>Percent Dislike: <span id="gender_unknown-dislike"></span>
+            </p>
+            <p id="americans-preferences">Country: United States
+            </br>Percent Like: <span id="americans-like"></span>
+            </br>Percent Dislike: <span id="americans-dislike"></span>
+            </p>
+            <p id="canadians-preferences">Country: Canada
+            </br>Percent Like: <span id="canadians-like"></span>
+            </br>Percent Dislike: <span id="canadians-dislike"></span>
+            </p>
+            <p id="other_countries-preferences">Country: Other
+            </br>Percent Like: <span id="other_countries-like"></span>
+            </br>Percent Dislike: <span id="other_countries-dislike"></span>
+            </p>
+        </div>
+    </body>
+</html>
