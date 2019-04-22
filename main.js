@@ -1,3 +1,5 @@
+// Read in data
+
 d3.csv("candy.csv", function(csv) {
     for (var i=0; i<csv.length; ++i) {
         csv[i].Age = Number(csv[i].Age);
@@ -11,100 +13,98 @@ d3.csv("candy.csv", function(csv) {
         csv[i].Gummy_Bears = Number(csv[i].Gummy_Bears);
         csv[i].Healthy_Fruit = Number(csv[i].Healthy_Fruit);
         csv[i].Heath_Bar = Number(csv[i].Heath_Bar);
-        csv[i].Hersheys_Dark_Chocolate = Number(csv[i].Hersheys_Dark_Chocolate)
-        csv[i].Hersheys_Kisses = Number(csv[i].Hersheys_Kisses)
-        csv[i].Hersheys_Milk_Chocolate = Number(csv[i].Hersheys_Milk_Chocolate)
-        csv[i].Jolly_Rancher_bad_flavor = Number(csv[i].Jolly_Rancher_bad_flavor)
-        csv[i].Jolly_Ranchers_good_flavor = Number(csv[i].Jolly_Ranchers_good_flavor)
-        csv[i].Junior_Mints = Number(csv[i].Junior_Mints)
-        csv[i].Kit_Kat = Number(csv[i].Kit_Kat)
-        csv[i].LaffyTaffy = Number(csv[i].LaffyTaffy)
-        csv[i].LemonHeads = Number(csv[i].LemonHeads)
-        csv[i].Licorice_black = Number(csv[i].Licorice_black)
-        csv[i].Licorice_not_black = Number(csv[i].Licorice_not_black)
-        csv[i].Lollipops = Number(csv[i].Lollipops)
-        csv[i].Mike_and_Ike = Number(csv[i].Mike_and_Ike)
-        csv[i].Milk_Duds = Number(csv[i].Milk_Duds)
-        csv[i].Milky_Way = Number(csv[i].Milky_Way)
-        csv[i].Mint_Kisses = Number(csv[i].Mint_Kisses)
-        csv[i].Mr_Goodbar = Number(csv[i].Mr_Goodbar)
-        csv[i].Nerds = Number(csv[i].Nerds)
-        csv[i].Nestle_Crunch = Number(csv[i].Nestle_Crunch)
-        csv[i].Peanut_M_Ms = Number(csv[i].Peanut_M_Ms)
-        csv[i].Peeps = Number(csv[i].Peeps)
-        csv[i].Pixy_Stix = Number(csv[i].Pixy_Stix)
-        csv[i].Reeses_Peanut_Butter_Cups = Number(csv[i].Reeses_Peanut_Butter_Cups)
-        csv[i].Reeses_Pieces = Number(csv[i].Reeses_Pieces)
-        csv[i].Regular_M_Ms = Number(csv[i].Regular_M_Ms)
-        csv[i].Rolos = Number(csv[i].Rolos)
-        csv[i].Skittles = Number(csv[i].Skittles)
-        csv[i].Snickers = Number(csv[i].Snickers)
-        csv[i].Sourpatch_Kids = Number(csv[i].Sourpatch_Kids)
-        csv[i].Starburst = Number(csv[i].Starburst)
-        csv[i].Swedish_Fish = Number(csv[i].Swedish_Fish)
-        csv[i].Three_Musketeers = Number(csv[i].Three_Musketeers)
-        csv[i].Tic_Tacs = Number(csv[i].Tic_Tacs)
-        csv[i].Toblerone = Number(csv[i].Toblerone)
-        csv[i].Trail_Mix = Number(csv[i].Trail_Mix)
-        csv[i].Twix = Number(csv[i].Twix)
-        csv[i].Whatchamacallit_Bars = Number(csv[i].Whatchamacallit_Bars)
-        csv[i].York_Peppermint_Patties = Number(csv[i].York_Peppermint_Patties)
+        csv[i].Hersheys_Dark_Chocolate = Number(csv[i].Hersheys_Dark_Chocolate);
+        csv[i].Hersheys_Kisses = Number(csv[i].Hersheys_Kisses);
+        csv[i].Hersheys_Milk_Chocolate = Number(csv[i].Hersheys_Milk_Chocolate);
+        csv[i].Jolly_Rancher_bad_flavor = Number(csv[i].Jolly_Rancher_bad_flavor);
+        csv[i].Jolly_Ranchers_good_flavor = Number(csv[i].Jolly_Ranchers_good_flavor);
+        csv[i].Junior_Mints = Number(csv[i].Junior_Mints);
+        csv[i].Kit_Kat = Number(csv[i].Kit_Kat);
+        csv[i].LaffyTaffy = Number(csv[i].LaffyTaffy);
+        csv[i].LemonHeads = Number(csv[i].LemonHeads);
+        csv[i].Licorice_black = Number(csv[i].Licorice_black);
+        csv[i].Licorice_not_black = Number(csv[i].Licorice_not_black);
+        csv[i].Lollipops = Number(csv[i].Lollipops);
+        csv[i].Mike_and_Ike = Number(csv[i].Mike_and_Ike);
+        csv[i].Milk_Duds = Number(csv[i].Milk_Duds);
+        csv[i].Milky_Way = Number(csv[i].Milky_Way);
+        csv[i].Mint_Kisses = Number(csv[i].Mint_Kisses);
+        csv[i].Mr_Goodbar = Number(csv[i].Mr_Goodbar);
+        csv[i].Nerds = Number(csv[i].Nerds);
+        csv[i].Nestle_Crunch = Number(csv[i].Nestle_Crunch);
+        csv[i].Peanut_M_Ms = Number(csv[i].Peanut_M_Ms);
+        csv[i].Peeps = Number(csv[i].Peeps);
+        csv[i].Pixy_Stix = Number(csv[i].Pixy_Stix);
+        csv[i].Reeses_Peanut_Butter_Cups = Number(csv[i].Reeses_Peanut_Butter_Cups);
+        csv[i].Reeses_Pieces = Number(csv[i].Reeses_Pieces);
+        csv[i].Regular_M_Ms = Number(csv[i].Regular_M_Ms);
+        csv[i].Rolos = Number(csv[i].Rolos);
+        csv[i].Skittles = Number(csv[i].Skittles);
+        csv[i].Snickers = Number(csv[i].Snickers);
+        csv[i].Sourpatch_Kids = Number(csv[i].Sourpatch_Kids);
+        csv[i].Starburst = Number(csv[i].Starburst);
+        csv[i].Swedish_Fish = Number(csv[i].Swedish_Fish);
+        csv[i].Three_Musketeers = Number(csv[i].Three_Musketeers);
+        csv[i].Tic_Tacs = Number(csv[i].Tic_Tacs);
+        csv[i].Toblerone = Number(csv[i].Toblerone);
+        csv[i].Trail_Mix = Number(csv[i].Trail_Mix);
+        csv[i].Twix = Number(csv[i].Twix);
+        csv[i].Whatchamacallit_Bars = Number(csv[i].Whatchamacallit_Bars);
+        csv[i].York_Peppermint_Patties = Number(csv[i].York_Peppermint_Patties);
     }
 
-main_data = []
-
-for (var i=0; i<csv.length; ++i) {
-    main_data.push(csv[i])
-}
+// Create holding containers for each candy type
 
         var Any_full_sized_candy_bar = [];
-        var Butterfinger = []
-        var Candy_Corn = []
-        var Chiclets = []
-        var Dots = []
-        var Fuzzy_Peaches = []
-        var Good_N_Plenty = []
-        var Gummy_Bears = []
-        var Healthy_Fruit = []
-        var Heath_Bar = []
-        var Hersheys_Dark_Chocolate = []
-        var Hersheys_Kisses = []
-        var Hersheys_Milk_Chocolate = []
-        var Jolly_Rancher_bad_flavor = []
-        var Jolly_Ranchers_good_flavor = []
-        var Junior_Mints = []
-        var Kit_Kat = []
-        var LaffyTaffy = []
-        var LemonHeads = []
-        var Licorice_black = []
-        var Licorice_not_black = []
-        var Lollipops = []
-        var Mike_and_Ike = []
-        var Milk_Duds = []
-        var Milky_Way = []
-        var Mint_Kisses = []
-        var Mr_Goodbar = []
-        var Nerds = []
-        var Nestle_Crunch = []
-        var Peanut_M_Ms = []
-        var Peeps = []
-        var Pixy_Stix = []
-        var Reeses_Peanut_Butter_Cups = []
-        var Reeses_Pieces = []
-        var Regular_M_Ms = []
-        var Rolos = []
-        var Skittles = []
-        var Snickers = []
-        var Sourpatch_Kids = []
-        var Starburst = []
-        var Swedish_Fish = []
-        var Three_Musketeers = []
-        var Tic_Tacs = []
-        var Toblerone = []
-        var Trail_Mix = []
-        var Twix = []
-        var Whatchamacallit_Bars = []
-        var York_Peppermint_Patties = []
+        var Butterfinger = [];
+        var Candy_Corn = [];
+        var Chiclets = [];
+        var Dots = [];
+        var Fuzzy_Peaches = [];
+        var Good_N_Plenty = [];
+        var Gummy_Bears = [];
+        var Healthy_Fruit = [];
+        var Heath_Bar = [];
+        var Hersheys_Dark_Chocolate = [];
+        var Hersheys_Kisses = [];
+        var Hersheys_Milk_Chocolate = [];
+        var Jolly_Rancher_bad_flavor = [];
+        var Jolly_Ranchers_good_flavor = [];
+        var Junior_Mints = [];
+        var Kit_Kat = [];
+        var LaffyTaffy = [];
+        var LemonHeads = [];
+        var Licorice_black = [];
+        var Licorice_not_black = [];
+        var Lollipops = [];
+        var Mike_and_Ike = [];
+        var Milk_Duds = [];
+        var Milky_Way = [];
+        var Mint_Kisses = [];
+        var Mr_Goodbar = [];
+        var Nerds = [];
+        var Nestle_Crunch = [];
+        var Peanut_M_Ms = [];
+        var Peeps = [];
+        var Pixy_Stix = [];
+        var Reeses_Peanut_Butter_Cups = [];
+        var Reeses_Pieces = [];
+        var Regular_M_Ms = [];
+        var Rolos = [];
+        var Skittles = [];
+        var Snickers = [];
+        var Sourpatch_Kids = [];
+        var Starburst = [];
+        var Swedish_Fish = [];
+        var Three_Musketeers = [];
+        var Tic_Tacs = [];
+        var Toblerone = [];
+        var Trail_Mix = [];
+        var Twix = [];
+        var Whatchamacallit_Bars = [];
+        var York_Peppermint_Patties = [];
+
+// Push values for each candy type into their own arrays
 
     for (var i=0; i<csv.length; ++i) {
         Any_full_sized_candy_bar.push(Number(csv[i].Any_full_sized_candy_bar));
@@ -117,19 +117,19 @@ for (var i=0; i<csv.length; ++i) {
         Gummy_Bears.push(Number(csv[i].Gummy_Bears));
         Healthy_Fruit.push(Number(csv[i].Healthy_Fruit));
         Heath_Bar.push(Number(csv[i].Heath_Bar));
-        Hersheys_Dark_Chocolate.push(Number(csv[i].Hersheys_Dark_Chocolate))
-        Hersheys_Kisses.push(Number(csv[i].Hersheys_Kisses))
-        Hersheys_Milk_Chocolate.push(Number(csv[i].Hersheys_Milk_Chocolate))
-        Jolly_Rancher_bad_flavor.push(Number(csv[i].Jolly_Rancher_bad_flavor))
-        Jolly_Ranchers_good_flavor.push(Number(csv[i].Jolly_Ranchers_good_flavor))
-        Junior_Mints.push(Number(csv[i].Junior_Mints))
-        Kit_Kat.push(Number(csv[i].Kit_Kat))
-        LaffyTaffy.push(Number(csv[i].LaffyTaffy))
-        LemonHeads.push(Number(csv[i].LemonHeads))
-        Licorice_black.push(Number(csv[i].Licorice_black))
-        Licorice_not_black.push(Number(csv[i].Licorice_not_black))
-        Lollipops.push(Number(csv[i].Lollipops))
-        Mike_and_Ike.push(Number(csv[i].Mike_and_Ike))
+        Hersheys_Dark_Chocolate.push(Number(csv[i].Hersheys_Dark_Chocolate));
+        Hersheys_Kisses.push(Number(csv[i].Hersheys_Kisses));
+        Hersheys_Milk_Chocolate.push(Number(csv[i].Hersheys_Milk_Chocolate));
+        Jolly_Rancher_bad_flavor.push(Number(csv[i].Jolly_Rancher_bad_flavor));
+        Jolly_Ranchers_good_flavor.push(Number(csv[i].Jolly_Ranchers_good_flavor));
+        Junior_Mints.push(Number(csv[i].Junior_Mints));
+        Kit_Kat.push(Number(csv[i].Kit_Kat));
+        LaffyTaffy.push(Number(csv[i].LaffyTaffy));
+        LemonHeads.push(Number(csv[i].LemonHeads));
+        Licorice_black.push(Number(csv[i].Licorice_black));
+        Licorice_not_black.push(Number(csv[i].Licorice_not_black));
+        Lollipops.push(Number(csv[i].Lollipops));
+        Mike_and_Ike.push(Number(csv[i].Mike_and_Ike));
         Milk_Duds.push(Number(csv[i].Milk_Duds))
         Milky_Way.push(Number(csv[i].Milky_Way))
         Mint_Kisses.push(Number(csv[i].Mint_Kisses))
@@ -663,6 +663,7 @@ else {
     })
     .on("click", function() {
         candyClicked = false;
+        chosen_candy = 'undefined'
         d3.selectAll(".candy_bar")
         .each(function(d) {
             d3.select(this).attr("opacity", function() {
@@ -736,6 +737,7 @@ else {
         genderClicked = false;
         countryClicked = false;
         candyClicked = false;
+        chosen_candy = 'undefined'
         d3.selectAll(".age_bar").attr("fill", "rgba(0,0,0,0.3)")
         d3.selectAll(".gender_bar").attr("fill", "rgba(0,0,0,0.3)")
         d3.selectAll(".country_bar").attr("fill", "rgba(0,0,0,0.3)")
@@ -1263,7 +1265,6 @@ candyClicked = false;
         candy_types = ["Any full-sized candy bar", "Butterfinger", "Candy Corn", "Chiclets", "Dots", "Fuzzy Peaches", "Good & Plenty", "Gummy Bears", "Healthy Fruit", "Heath Bar", "Hershey's Dark Chocolate", "Hershey's Kisses", "Hershey's Milk Chocolate", "Jolly Rancher (bad flavor)", "Jolly Ranchers (good flavor)", "Junior Mints", "Kit Kat", "LaffyTaffy", "LemonHeads", "Licorice (black)", "Licorice (other)", "Lollipops", "Mike and Ike", "Milk Duds", "Milky Way", "Mint Kisses", "Mr. Goodbar", "Nerds", "Nestle Crunch", "Peanut M&Ms", "Peeps", "Pixy Stix", "Reeses Peanut Butter Cups", "Reeses Pieces", "Regular M&Ms", "Rolos", "Skittles", "Snickers", "Sourpatch Kids", "Starburst", "Swedish Fish", "Three Musketeers", "Tic Tacs", "Toblerone", "Trail Mix", "Twix", "Whatchamacallit Bars", "York Peppermint Patties"]
         candy_codes = ["Any_full_sized_candy_bar", "Butterfinger", "Candy_Corn", "Chiclets", "Dots", "Fuzzy_Peaches", "Good_N_Plenty", "Gummy_Bears", "Healthy_Fruit", "Heath_Bar", "Hersheys_Dark_Chocolate", "Hersheys_Kisses", "Hersheys_Milk_Chocolate", "Jolly_Rancher_bad_flavor", "Jolly_Ranchers_good_flavor", "Junior_Mints", "Kit_Kat", "LaffyTaffy", "LemonHeads", "Licorice_black", "Licorice_not_black", "Lollipops", "Mike_and_Ike", "Milk_Duds", "Milky_Way", "Mint_Kisses", "Mr_Goodbar", "Nerds", "Nestle_Crunch", "Peanut_M_Ms", "Peeps", "Pixy_Stix", "Reeses_Peanut_Butter_Cups", "Reeses_Pieces", "Regular_M_Ms", "Rolos", "Skittles", "Snickers", "Sourpatch_Kids", "Starburst", "Swedish_Fish", "Three_Musketeers", "Tic_Tacs", "Toblerone", "Trail_Mix", "Twix", "Whatchamacallit_Bars", "York_Peppermint_Patties"]
         i = candy_types.indexOf(candy_type)
-        chosen_candy = candy_types[i]
         chosen_candy_col = candy_codes[i]
 
         overall_like = csv.filter(function(d) {
@@ -1610,9 +1611,11 @@ candyClicked = false;
 .on("click", function() {
     if (!candyClicked) {
         candyClicked = true;
+        chosen_candy = candy_types[i]
     }
-    else {
+    else if (candyClicked) {
         candyClicked = false;
+        chosen_candy = undefined;
     }
 })
 
@@ -1767,7 +1770,7 @@ function make_candy_bars(csv) {
         candy_nest["Whatchamacallit Bars"] = d3.mean(Whatchamacallit_Bars)
         candy_nest["York Peppermint Patties"] = d3.mean(York_Peppermint_Patties)
 
-if (candyClicked) {
+if (candyClicked && typeof chosen_candy !== 'undefined') {
     sentiment_val = candy_nest[chosen_candy]
     sentiment_val_rounded = d3.format(".2f")(sentiment_val)
     d3.select("#overall_sentiment").text(sentiment_val_rounded)
@@ -2136,7 +2139,7 @@ for (var i=0; i<candies.length; ++i)
     .attr("height", function(d) {return yScale_candy.bandwidth()})
     .attr("opacity", function(d) {
             if(d.value < 0) {
-                if (candyClicked) {
+                if (candyClicked && typeof chosen_candy !== 'undefined') {
                     if (d.key == chosen_candy) {
                         return 0.4
                     }
@@ -2149,7 +2152,7 @@ for (var i=0; i<candies.length; ++i)
             }
         }
             else {
-                if (candyClicked) {
+                if (candyClicked && typeof chosen_candy !== 'undefined') {
                     if (d.key == chosen_candy) {
                         return 1
                     }
@@ -2579,9 +2582,11 @@ for (var i=0; i<candies.length; ++i)
 .on("click", function() {
     if (!candyClicked) {
         candyClicked = true;
+        chosen_candy = candy_types[i]
     }
-    else {
+    else if (candyClicked) {
         candyClicked = false;
+        chosen_candy = undefined;
     }
 })
 
